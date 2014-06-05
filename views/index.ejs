@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='' />
+    <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+    .input-group-addon {
+          min-width:120px;// if you want width please write here //
+          text-align:left;
+    }
+    </style>
+  </head>
+  <body>
+    <script src="/javascripts/jquery-2.1.1.min.js"></script>
+    <script src="/javascripts/knockout-latest.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <div class="container">
+      <div class="page-header">
+        <h1><%= title %></h1>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p>Welcome to the Math Quiz generator!</p>
+          <form action="gen_quiz" method="post">
+            <div class="row">
+              <div class="col-lg-6">
+            <div class="input-group">
+              <span class="input-group-addon">Pages:</span>
+            <input type="text" class="form-control" name="pages" id="pages" ><br>
+          </div>
+            <div class="input-group">
+              <span class="input-group-addon">Number Level:</span>
+            <input type="text" class="form-control" name="number" id="number" ><br>
+          </div>
+              <input type="radio" name="quiztype" value="add" checked="checked">
+              Addition<br>
+              <input type="radio" name="quiztype" value="sub">
+              Subtraction<br>
+            <input type="submit" value="Submit">
+        </div>
+        </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    $("#pages").val(1);
+    $("#number").val(20);
+    </script>
+  </body>
+</html>
